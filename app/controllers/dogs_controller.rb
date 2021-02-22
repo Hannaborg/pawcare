@@ -8,7 +8,7 @@ class DogsController < ApplicationController
   end
 
   def new
-    @cocktail = Cocktail.new
+    @dog = Dog.new
   end
 
   def create
@@ -20,6 +20,16 @@ class DogsController < ApplicationController
       flash[:error] = "Something went wrong"
       render :new
     end
+  end
+
+  def destroy
+    @dog = dog.find(dog_params)
+    if @dog.destroy
+      flash[:success] = 'Dog-entry was successfully deleted.'
+    else
+      flash[:error] = 'Something went wrong'
+    end
+    redirect_to dogs_path(@dog)
   end
 
   private
