@@ -1,0 +1,28 @@
+fonts-colors
+<div class="container-dog-index">
+  <h1> Dogs </h1>
+
+<div class="index-banner">
+	<%= render "components/banner" %>
+</div>
+
+<div class="container">
+	<div class="row">
+		<% @dogs.each do |dog| %>
+			<div class="col-sm-6">
+				<div class="card-trip">
+					<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+					<div class="card-trip-infos">
+						<div>
+						<h2>some title of a dog</h2>
+						<p>Short description here!</p>
+						</div>
+						<button type="button" class="btn btn-light">More!</button>
+						<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+master
