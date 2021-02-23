@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-}
 
 .banner h1 {
   color: white;
@@ -37,52 +36,4 @@
 
 .container {
   text-align: center;
-}
-
-.dogbanner {
-  background-color: white;
-  padding-top: 50px;
-  position: relative;
-  .text {
-    position: absolute;
-    top: 20px;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .text p {
-    color: black;
-  }
-  .text-content {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-
-.banner-content {
-  background-image: url('https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg');
-  opacity: 0.8;
-  width: 100%;
-  background-position: 5px 5px 5px;
-  height: 250px;
-  width: 97%;
-  margin: 20px auto;
-}
-
-.banner-content h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  color: black;
-  padding-bottom: 0px;
-}
-
-.index-add-button {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
 }
