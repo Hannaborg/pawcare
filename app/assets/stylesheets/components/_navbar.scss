@@ -1,8 +1,33 @@
-.navbar {
+// .navbar {
+  // background: $light-light;
+  // font-family: $headers-font;
+// }
+
+// .nav-item {
+  // font-family: $body-font;
+// }
+
+// #navbarTogglerDemo02 {
+  // display: flex;
+  // justify-content: flex-end;
+  // justify-content: space-between;
+// }
+
+
+.navbar-lewagon {
   background: $light-light;
-  font-family: $headers-font;
+  justify-content: space-between;
+  font-family: $body-font;
 }
 
-.nav-item {
-  font-family: $body-font;
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.navbar-brand {
+  font-family: $headers-font;
 }
