@@ -22,6 +22,11 @@
     opacity: .7;
     margin: 0;
   }
+
+  .col-sm-4 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   
   
   .card-trip .card-trip-infos {
@@ -39,3 +44,6 @@
     width: 40px;
   }
   
+.card-text {
+  color: black;
+}
