@@ -3,14 +3,12 @@
 <div class="form-container col-12">
   <div class="form-inputs col-6">
     <%= simple_form_for @dog do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <%= f.input :name %>
       <%= f.input :breed %>
       <%= f.input :description %>
       <div class="form-btns">
-        <%= f.button :submit, class: "btn btn-primary" %>
-        <%= link_to "Go back", dogs_path, class: "btn btn-primary" %>
+        <%= f.button :submit, class: "btn btn-outline-secondary" %>
+        <%= link_to "Go back", dogs_path, class: "btn btn-outline-secondary" %>
       </div>
     <% end %>
   </div>

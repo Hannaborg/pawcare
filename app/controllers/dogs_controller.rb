@@ -6,7 +6,7 @@ class DogsController < ApplicationController
   end
 
   def show
-    @dogs = Dog.find(params[:id])
+    @dog = Dog.find(params[:id])
   end
 
   def new
@@ -15,9 +15,10 @@ class DogsController < ApplicationController
 
   def create
     @dog = Dog.new(dog_params)
+    @dog.user = current_user
     if @dog.save
       flash[:success] = "Dog-entry successfully created"
-      redirect_to dogs_path(@dog)
+      redirect_to dog_path(@dog)
     else
       flash[:error] = "Something went wrong"
       render :new
@@ -25,13 +26,13 @@ class DogsController < ApplicationController
   end
 
   def destroy
-    @dog = dog.find(dog_params)
+    @dog = Dog.find(params[:id])
     if @dog.destroy
       flash[:success] = 'Dog-entry was successfully deleted.'
     else
       flash[:error] = 'Something went wrong'
     end
-    redirect_to dogs_path(@dog)
+    redirect_to dogs_path
   end
 
   private
