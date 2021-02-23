@@ -14,7 +14,7 @@ class DogsController < ApplicationController
   end
 
   def create
-    @dog = Object.new(dog_params)
+    @dog = Dog.new(dog_params)
     if @dog.save
       flash[:success] = "Dog-entry successfully created"
       redirect_to dogs_path(@dog)

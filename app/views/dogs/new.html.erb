@@ -1,0 +1,12 @@
+<h1>List a Dog</h1>
+
+
+<%= simple_form_for @dog do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.input :name %>
+  <%= f.input :breed %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+<%= link_to "Go back", dogs_path, class: "btn btn-primary" %>
