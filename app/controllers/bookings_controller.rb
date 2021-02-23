@@ -16,6 +16,17 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    if @booking.destroy
+      flash[:success] = 'Your booking was successfully canceled.'
+      redirect_to dogs_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to new_dog_booking_path(@booking)
+    end
+  end
+
   private
 
   def booking_params

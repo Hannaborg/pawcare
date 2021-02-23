@@ -1,6 +1,6 @@
 .banner {
   background-image: url('https://images.unsplash.com/photo-1489417139533-915815598d31?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2010&q=80');
-  opacity: 0.9;
+  opacity: 0.8;
   height: 100vh;
   width: 100%;
   background-attachment: fixed;
@@ -11,4 +11,29 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
+
+.banner h1 {
+  color: white;
+  font-family: $headers-font;
+  font-weight: 500;
+  text-align: center;
+  font-size: 50px;
+  padding: 30px;
+  text-shadow: 0.5px 0.5px 5px black;
+}
+
+.banner h3 {
+  font-family: $headers-font;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  line-height: 1.8;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0.5px 0.5px 5px black;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
 }
