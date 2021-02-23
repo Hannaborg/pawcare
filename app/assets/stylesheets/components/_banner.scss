@@ -40,20 +40,34 @@
 }
 
 .dogbanner {
+  background-color: white;
+  padding-top: 50px;
+  position: relative;
+  .text {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .text p {
+    color: black;
+  }
+  .text-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+.banner-content {
   background-image: url('https://image.shutterstock.com/image-vector/dogs-banner-260nw-441292900.jpg');
   opacity: 0.8;
   width: 100%;
   background-position: 5px 5px 5px;
-  height: 27vh;
-}
-
-.text {
-  text-align: center;
-  justify-content: center;
-}
-
-.banner-content {
-  width: 90%;
+  height: 250px;
+  width: 97%;
   margin: 20px auto;
 }
 
@@ -68,4 +82,7 @@
 .index-add-button {
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
