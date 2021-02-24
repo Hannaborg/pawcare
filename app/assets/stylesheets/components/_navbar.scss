@@ -3,9 +3,9 @@
   // font-family: $headers-font;
 // }
 
-// .nav-item {
-  // font-family: $body-font;
-// }
+.nav-item {
+ font-family: $body-font;
+}
 
 // #navbarTogglerDemo02 {
   // display: flex;
@@ -31,3 +31,11 @@
 .navbar-brand {
   font-family: $headers-font;
 }
+
+.nav-item {
+  font-family: $headers-font;
+  color: black;
+  margin: 2px;
+  display: flex;
+  justify-content: flex-end;
+ }
