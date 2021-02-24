@@ -2,6 +2,7 @@
 	display: flex;
 	justify-content: center;
 	margin: 20px;
+  color: $dark-dark;
 }
 
 .form-btns {
@@ -10,5 +11,5 @@
 }
 
 .form-inputs {
-	color: black;
+	color: $dark-dark;
 }

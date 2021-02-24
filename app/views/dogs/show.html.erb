@@ -1,16 +1,14 @@
 <h1>Meet <%= Dog.last.name %>!</h1>
 
-<div class="show-container col-12">
+<div class="dog-container col-12">
   <img src="https://images.unsplash.com/photo-1587559045816-8b0a54d1fbd2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80">
-  <div style="width: 20rem;">
-    <div class="card-body">
-      <h3 class="card-title">Breed: <em> <%= Dog.last.breed %> </em></h3>
-      <p class="card-text"><%= Dog.last.description %></p>
-      <%= link_to "Book Dog", dogs_path, type: "button", class: "btn btn-outline-dark" %>
-    </div>
+  <div class="card-body" style="width: 20rem";>
+    <h3 class="card-title">Breed: <em> <%= Dog.last.breed %> </em></h3>
+    <p class="card-text"><%= Dog.last.description %></p>
+    <%= link_to "Book Dog", dogs_path, type: "button", class: "btn btn-outline-dark" %>
   </div>
 </div>
 
-<div class="back-link">
-  <%= link_to "< Back", dogs_path %>
+<div class="plain-text-button">
+  <p><%= link_to "< Back", dogs_path %></p>
 </div>
