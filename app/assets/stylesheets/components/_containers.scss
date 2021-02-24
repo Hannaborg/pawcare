@@ -1,0 +1,21 @@
+.dog-container {
+  text-color: $dark-dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px;
+  color: $dark-dark;
+}
+
+.dog-container img {
+  height: 300px;
+  border-radius: 3px;
+  box-shadow: 0.2px 0.2px 1px black;
+  margin-right: 20px;
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}

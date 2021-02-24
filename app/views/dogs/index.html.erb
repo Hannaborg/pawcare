@@ -1,30 +1,23 @@
-<div class="container-dog-index">
-  <h1> Dogs </h1>
+<h1> Dogs </h1>
 
-<div class="index-banner">
-	<%= render "components/banner" %>
-</div>
-
-<div class="index-add-button">
+<div class="container">
 	<%= link_to "Add a dog", new_dog_path, type: "button", class:"btn btn-outline-secondary" %>
 </div>
 
-<div class="card-container">
-	<div class="row">
+
+	<div class="col-12">
+    <div class="card-dog col-sm-4 p-0">
 		<% @dogs.each do |dog| %>
-			<div class="col-sm-4">
-				<div class="card-trip">
-					<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-					<div class="card-trip-infos">
-						<div class="card-text">
-						<h2>some title of a dog</h2>
-						<p>Short description here!</p>
-						</div>
-						<button type="button" class="btn btn-secondary btn-sm">More!</button>
-						<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-					</div>
-				</div>
+			<div>
+  			<img src="#" >
+  			<div class="card-dog-info">
+  				<div class="card-dog-text">
+    				<h2> <%= Dog.last.name %> </h2>
+    				<p> <%= Dog.last.breed %> </p>
+  				</div>
+  				<button type="button" class="btn btn-secondary btn-sm">View</button>
+  			<!-- 	<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-user avatar-bordered" /> -->
+  			</div>
 			</div>
 		<% end %>
 	</div>
-</div>
