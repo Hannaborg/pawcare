@@ -1,0 +1,49 @@
+.card-dog {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  padding: 0;
+}
+
+.card-dog img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-dog h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-dog p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.col-sm-4 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card-dog .card-dog-info {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+ }
+
+.card-dog .card-dog-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-dog-text {
+  color: $dark-dark;
+}

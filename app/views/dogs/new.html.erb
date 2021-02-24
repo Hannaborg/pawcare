@@ -1,4 +1,4 @@
-<h1>List a Dog</h1>
+<h1>Add Your Dog</h1>
 
 <div class="form-container col-12">
   <div class="form-inputs col-6">
@@ -7,8 +7,8 @@
       <%= f.input :breed %>
       <%= f.input :description %>
       <div class="form-btns">
-        <%= f.button :submit, class: "btn btn-outline-secondary" %>
         <%= link_to "Go back", dogs_path, class: "btn btn-outline-secondary" %>
+        <%= f.button :submit, class: "btn btn-outline-secondary" %>
       </div>
     <% end %>
   </div>
