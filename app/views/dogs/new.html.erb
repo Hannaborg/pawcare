@@ -6,6 +6,7 @@
       <%= f.input :name %>
       <%= f.input :breed %>
       <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
       <div class="form-btns">
         <%= link_to "Go back", dogs_path, class: "btn btn-outline-secondary" %>
         <%= f.button :submit, class: "btn btn-outline-secondary" %>
