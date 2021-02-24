@@ -3,10 +3,6 @@
   // font-family: $headers-font;
 // }
 
-.nav-item {
- font-family: $body-font;
-}
-
 // #navbarTogglerDemo02 {
   // display: flex;
   // justify-content: flex-end;
@@ -38,4 +34,8 @@
   margin: 2px;
   display: flex;
   justify-content: flex-end;
+ }
+
+ .nav-itemlc {
+  font-family: $body-font;
  }
