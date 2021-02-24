@@ -1,10 +1,10 @@
-<h1>Meet <%= Dog.last.name %>!</h1>
+<h1>Meet <%= @dog.name %>!</h1>
 
 <div class="dog-container col-12">
   <%= cl_image_tag @dog.photo.key, crop: :fill %>
   <div class="card-body" style="width: 20rem";>
-    <h3 class="card-title">Breed: <em> <%= Dog.last.breed %> </em></h3>
-    <p class="card-text"><%= Dog.last.description %></p>
+    <h3 class="card-title">Breed: <em> <%= @dog.breed %> </em></h3>
+    <p class="card-text"><%= @dog.description %></p>
     <%= link_to "Book Dog", dogs_path, type: "button", class: "btn btn-outline-dark" %>
   </div>
 </div>

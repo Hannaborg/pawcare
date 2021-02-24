@@ -12,8 +12,8 @@
         <img src="#" >
         <div class="card-dog-info">
           <div class="card-dog-text">
-            <h2> <%= Dog.last.name %> </h2>
-            <p> <%= Dog.last.breed %> </p>
+            <h2> <%= @dog.name %> </h2>
+            <p> <%= @dog.breed %> </p>
           </div>
           <%= link_to "View", dog_path(dog.id), type: "button", class:"btn btn-secondary btn-sm" %>
           <!-- 	<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-user avatar-bordered" /> -->
