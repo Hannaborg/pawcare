@@ -1,10 +1,25 @@
 <h1> Dogs </h1>
 
+<div class="search-container">
+  <%= form_tag dogs_path, class: "form-search-elements", method: :get do %>
+    <div class="">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control", style: "width: 95%",
+        placeholder: "Find a Dog"
+      %>
+    </div>
+    <div class="search-btn d-flex justify-content-center">
+      <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+    </div>
+    <% end %>
+</div>
+
 <div class="card-container">
   <div class="row">
     <% @dogs.each do |dog| %>
     <div class="col-sm-4">
-      <div class="dog-container">          
+      <div class="dog-container">
         <div class="card-dog p-0">
             <% if dog.photo.attached? %>
                 <%= cl_image_tag dog.photo.key %>
@@ -19,9 +34,9 @@
               <!-- 	<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-user avatar-bordered" /> -->
             </div>
           <%= link_to dog_path(dog.id) do %>
-            <div class="overlay">            
+            <div class="overlay">
               <h1>  </h1>
-            </div> 
+            </div>
           <% end %>
         </div>
       </div>
