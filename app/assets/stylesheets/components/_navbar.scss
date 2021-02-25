@@ -31,7 +31,7 @@
 .nav-item {
   font-family: $headers-font;
   color: black;
-  margin: 2px;
+  margin: 5px;
   display: flex;
   justify-content: flex-end;
  }
@@ -39,3 +39,8 @@
  .nav-itemlc {
   font-family: $body-font;
  }
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
