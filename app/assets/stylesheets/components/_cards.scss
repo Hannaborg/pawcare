@@ -2,7 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  margin-top: 0px;
   padding: 0;
 }
 
@@ -46,4 +46,33 @@
 
 .card-dog-text {
   color: $dark-dark;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: content-box;
+}
+
+.dog-container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: .2s ease;
+  background-color: #868265;
+  color: white;
+}
+
+.dog-container:hover .overlay {
+  opacity: 0.5;
 }
