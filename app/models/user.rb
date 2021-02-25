@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :dogs, dependent: :destroy
   has_many :bookings
   has_many :booked_dogs, through: :bookings, source: :dog
+  has_one_attached :photo
 
   validates :name, presence: true
   validates :email, uniqueness: true, presence: true
