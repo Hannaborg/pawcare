@@ -1,6 +1,6 @@
 
 <% if @booking.user == current_user %>
-  <h1>Bookings for  <%= @booking.user.name%></h1>
+  <h1>Confirm you booking</h1>
   <h1>Your dog is:<%= @booking.dog.name %></h1>
   <%# <%= cl_image_tag @booking.dog.photo.key, crop: :fill %>%>  Image not working
   <h1>Your booking will start at:<%= @booking.start_date %></h1>
@@ -9,5 +9,5 @@
   <h1>You have no bookings</h1>
 <% end %>
 <div class="plain-text-button">
-  <p><%= link_to "< Back", dogs_path %></p>
+  <p><%= link_to "< Back", dogs_path %>  <%= link_to "Confirm", dashboard_path %></p>
 </div>
