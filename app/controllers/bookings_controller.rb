@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.dog = @dog
     if @booking.save
-      flash[:notice] = 'Your booking was successfully created.'
+      flash[:alert] = 'Please confirm your reservation'
       redirect_to dog_booking_path(@dog, @booking)
     else
       flash[:alert] = 'Something went wrong with the dates'
