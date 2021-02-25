@@ -20,6 +20,18 @@
   padding: 24px;
 }
 
-html, body {
-  height: 100%;
+.step-container {
+  padding: 50px;
+  color: $dark-dark;
+  text-align: center;
+}
+
+.step-container h3 {
+  font-size: 20px;
+  color: $dark-green;
+}
+
+.step-container p {
+  font-size: 12px;
+  opacity: 0.7;
 }
