@@ -4,19 +4,24 @@
   <div class="row">
     <% @dogs.each do |dog| %>
     <div class="col-sm-4">
-      <div class="card-dog p-0">
-        <% if dog.photo.attached? %>
-          <%= cl_image_tag dog.photo.key %>
-        <% else %>
-          <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
-        <% end %>
-        <div class="card-dog-info">
-          <div class="card-dog-text">
-            <h2> <%= dog.name %> </h2>
-            <p> <%= dog.breed %> </p>
+      <div class="dog-container">
+        <div class="card-dog p-0">
+          <% if dog.photo.attached? %>
+            <%= cl_image_tag dog.photo.key %>
+          <% else %>
+            <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+          <% end %>
+          <div class="card-dog-info">
+            <div class="card-dog-text">
+              <h2> <%= dog.name %> </h2>
+              <p> <%= dog.breed %> </p>
+            </div>
+            <!-- 	<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-user avatar-bordered" /> -->
           </div>
-          <%= link_to "View", dog_path(dog.id), type: "button", class:"btn btn-secondary btn-sm" %>
-          <!-- 	<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-user avatar-bordered" /> -->
+          <%= link_to dog_path(dog.id) do %>
+          <div class="overlay">
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
