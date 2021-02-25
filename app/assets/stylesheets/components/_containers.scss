@@ -1,22 +1,69 @@
+
 .dog-container {
-  text-color: $dark-dark;
-  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.dog-index-container {
   align-items: center;
   justify-content: center;
-  margin: 70px;
   color: $dark-dark;
-}
-
-.dog-container img {
-  height: 300px;
   border-radius: 3px;
+  max-width: 300px;
+  min-width: 300px;
   margin-right: 20px;
+  margin-bottom: 20px;
+  background: white;
+  overflow: hidden;
 }
 
-.container {
+.dog-index-container img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dog-index-container:hover .overlay {
+  opacity: 0.5;
+}
+
+.card-dog h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-dog p {
+  font-size: 12px;
+  opacity: .7;
+  padding-top: 10px;
+}
+
+.dog-show-container {
+  display:flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 24px;
+  color: $dark-dark;
+  max-width: 700px;
+  margin: auto;
+  height: 300px;
+  padding: 100px;
+}
+
+.dog-show-container img {
+  height: 100%;
+  width: 250px;
+  object-fit: cover;
+  padding-right: 20px;
+}
+
+.dog-show-container h3 {
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.dog-show-container p {
+  padding-bottom: 15px;
 }
 
 .step-container {
@@ -24,7 +71,8 @@
   color: $dark-dark;
   text-align: center;
   padding: 0;
-  width: 150px;
+  max-width: 230px;
+  padding-bottom: 40px;
 }
 
 .step-container h3 {
@@ -37,3 +85,26 @@
   opacity: 0.7;
   color: $dark-green;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: .2s ease;
+  background-color: #868265;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.d-flex {
+  margin: 0;
+}
+

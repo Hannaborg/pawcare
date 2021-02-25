@@ -1,6 +1,6 @@
 <h1>Meet <%= @dog.name %>!</h1>
 
-<div class="dog-container col-12">
+<div class="dog-show-container col-6">
   <% if @dog.photo.attached? %>
     <%= cl_image_tag @dog.photo.key, crop: :fill %>
   <% else %>

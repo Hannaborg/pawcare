@@ -15,11 +15,10 @@
     <% end %>
 </div>
 
-<div class="card-container">
+<div class="container">
   <div class="row">
     <% @dogs.each do |dog| %>
-    <div class="col-sm-4">
-      <div class="dog-container">
+      <div class="dog-index-container col-sm p-0">
         <div class="card-dog p-0">
             <% if dog.photo.attached? %>
                 <%= cl_image_tag dog.photo.key %>
@@ -38,7 +37,6 @@
               <h1>  </h1>
             </div>
           <% end %>
-        </div>
       </div>
     </div>
     <% end %>
