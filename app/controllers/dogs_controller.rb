@@ -2,7 +2,11 @@ class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @dogs = Dog.all
+    if params[:query].present?
+      @dogs = Dog.search_by_name_and_breed(params[:query])
+    else
+      @dogs = Dog.all
+    end
   end
 
   def show
