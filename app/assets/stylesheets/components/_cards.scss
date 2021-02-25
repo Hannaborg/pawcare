@@ -1,7 +1,11 @@
+.card-body {
+  width: 50px;
+}
+
 .card-dog {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 3px;
   margin-top: 20px;
   padding: 0;
 }
