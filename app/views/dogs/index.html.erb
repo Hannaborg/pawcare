@@ -1,5 +1,20 @@
 <h1> Dogs </h1>
 
+<div class="search-container">
+  <%= form_tag dogs_path, class: "form-search-elements", method: :get do %>
+    <div class="">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control", style: "width: 95%",
+        placeholder: "Find a Dog"
+      %>
+    </div>
+    <div class="search-btn d-flex justify-content-center">
+      <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+    </div>
+    <% end %>
+</div>
+
 <div class="card-container">
   <div class="row">
     <% @dogs.each do |dog| %>
