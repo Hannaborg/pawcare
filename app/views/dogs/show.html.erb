@@ -9,7 +9,11 @@
   <div class="card-body">
     <h3 class="card-title">Breed: <em> <%= @dog.breed %> </em></h3>
     <p class="card-text"><%= @dog.description %></p>
-    <%= link_to "Book Dog", new_dog_booking_path(@dog), type: "button", class: "btn btn-outline-dark" %>
+    <% if @dog.user == current_user %>
+      <%= link_to "delete", dog_path(@dog), method: :delete, type: "button", class: "btn btn-outline-dark" %>
+    <% else %>
+      <%= link_to "Book Dog", new_dog_booking_path(@dog), type: "button", class: "btn btn-outline-dark" %>
+    <% end %>
   </div>
 </div>
 
