@@ -35,3 +35,14 @@
     width: 500px;
     margin: 10px auto;
 }
+
+.home-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.plain-text-button p {
+  margin: 20px;
+  text-color: $dark-dark;
+  text-decoration: none;
+}

@@ -1,31 +1,6 @@
 .card-body {
-  width: 50px;
-}
-
-.card-dog {
-  overflow: hidden;
-  background: white;
-  border-radius: 3px;
-  margin-top: 0px;
-  padding: 0;
-}
-
-.card-dog img {
-  height: 100px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-dog h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-dog p {
-  font-size: 12px;
-  opacity: .7;
-  padding-top: 10px;
+ width: 50px;
+ padding: 0;
 }
 
 .col-sm-4 {
@@ -34,11 +9,9 @@
 }
 
 .card-dog .card-dog-info {
-  padding: 25px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
  }
 
 .card-dog .card-dog-user {
@@ -48,34 +21,9 @@
   width: 40px;
 }
 
-.card-dog-text {
-  color: $dark-dark;
-}
-
 *, *::before, *::after {
   -webkit-box-sizing: initial;
   -moz-box-sizing: initial;
   box-sizing: content-box;
 }
 
-.dog-container {
-  position: relative;
-  width: 100%;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  transition: .2s ease;
-  background-color: #868265;
-}
-
-.dog-container:hover .overlay {
-  opacity: 0.5;
-}

@@ -1,10 +1,17 @@
 .search-container {
-    width: 500px;
-    margin: 20px auto;
+  width: 500px;
+  margin: 20px auto;
+  padding-bottom: 50px;
+  justify-content: space-around;
+
 }
 
 .form-search-elements {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#query {
+  margin-bottom: 30px;
 }
