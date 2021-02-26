@@ -1,17 +1,29 @@
+<h1> My Bookings </h1>
 
-<% @bookings.each do |booking| %>
-  <% if booking.dog.photo.attached? %>
-    <%= cl_image_tag booking.dog.photo.key, height: 100, width: 100, crop: :fill %>
-  <% else %>
-    <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"width="100" height="100">
-  <% end  %>
-      <h1><%= booking.dog.name %></h1>
-      <p style="color: black">Start: <%= booking.start_date %> End: <%= booking.end_date %></p>
-      <p><%= link_to "Cancel", booking_path(booking), method: :delete %></p>
- <% end %>
-
-
-<div class="plain-text-button">
-  <p><%= link_to "< Back", dogs_path %></p>
+<div class="my-bookings-container">
+  <% @bookings.each do |booking| %>
+    <div class="my-bookings-card">
+      <% if booking.dog.photo.attached? %>
+        <%= cl_image_tag booking.dog.photo.key, class: "avatar-large" %>
+      <% else %>
+        <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"width="100" height="100">
+      <% end  %>
+        <div class="my-bookings-card-info">
+          <h3><%= booking.dog.name %></h3>
+          <div class="my-bookings-dates-trash d-flex">
+            <div class="my-bookings-dates">
+              <p>From: <%= booking.start_date %></p>
+              <p>To: <%= booking.end_date %></p>
+            </div>
+            <div class="my-bookings-actions">
+              <i><%= link_to "", booking_path(booking), class: "fas fa-trash-alt", method: :delete %></i>
+            </div>
+          </div>
+        </div>
+      </div>
+     <% end %>
 </div>
+
+
+<div style="margin: 20px;"><%= link_to "Back", dogs_path, type: "button", class: "btn btn-light" %></div>
 

@@ -1,12 +1,13 @@
 <h1>Make a new booking</h1>
-<div style=" margin: 50px 300px">
-<%= simple_form_for [@dog, @booking] do |f| %>
-  <%# <%= f.error_notification %>
-  <%# <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %> %> %>
-  <%= f.input :start_date, as: :date, html5: true, label: "From" %>
-  <%= f.input :end_date, as: :date, html5: true, label: "To" %>
-  <%= link_to 'Cancel', dogs_path, class: 'btn btn-secondary' %> or
-  <%= f.submit class: 'btn btn-primary' %>
-  
-<% end %>
+<div class="form-container col-12">
+  <div class="form-inputs col-6">
+    <%= simple_form_for [@dog, @booking] do |f| %>
+      <%# <%= f.error_notification %>
+      <%# <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= link_to 'Cancel', dogs_path, class: 'btn btn-outline-secondary' %> or
+      <%= f.submit class: 'btn btn-outline-secondary' %>
+    <% end %>
+  </div>
 </div>

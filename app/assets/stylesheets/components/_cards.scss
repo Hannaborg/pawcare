@@ -27,3 +27,52 @@
   box-sizing: content-box;
 }
 
+.my-bookings-card {
+  background: white;
+  color: $dark-green;
+  border-radius: 3px;
+  border: 1px solid rgb(235,235,235);
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  margin: auto;
+  max-width: 500px;
+  height: 130px;
+  margin-bottom: 30px;
+}
+
+.my-bookings-card-info {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.my-bookings-card-info p {
+  margin: 0;
+}
+
+.my-bookings-card img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+.my-bookings-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.my-bookings-card:hover .my-bookings-actions {
+  opacity: 1;
+}
+
+.my-bookings-card .my-bookings-actions {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.my-bookings-card .my-bookings-actions:hover {
+  color: #555555;
+}
