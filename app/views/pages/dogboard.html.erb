@@ -1,0 +1,17 @@
+<h1>My Dogs</h1>
+<% current_user.dogs.each do |dog| %>
+  <div class="my-dog-img">
+      <%= link_to dog_path(dog.id) do %>
+  <% if dog.photo.attached? %>
+    <%= cl_image_tag dog.photo.key %>
+  <% else %>
+    <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+  <% end  %>
+    <div class="dog-middle">
+      <div class="dog-text"> <%= dog.name %> </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div style="margin: 20px;"><%= link_to "Back", dogs_path, type: "button", class: "btn btn-light" %></div>

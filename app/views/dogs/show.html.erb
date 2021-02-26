@@ -7,18 +7,16 @@
     <img src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
   <% end %>
   <div class="card-body">
-    <h3 class="card-title">Breed: <em> <%= @dog.breed %> </em></h3>
-    <h3 class="card-title">Age: <em> <%= @dog.age %> </em></h3>
+    <h4 class="card-title">Breed: <em> <%= @dog.breed %> </em></h4>
+    <h4 class="card-title">Age: <em> <%= @dog.age %> </em></h4>
+    <h4 class="card-text">Where? <em> <%= @dog.address %> </em></h4>
     <p class="card-text"><%= @dog.description %></p>
     <% if @dog.user == current_user %>
-      <%= link_to "delete", dog_path(@dog), method: :delete, type: "button", class: "btn btn-outline-dark" %>
+      <%= link_to "Delete", dog_path(@dog), method: :delete, type: "button", class: "btn btn-outline-dark" %>
     <% else %>
       <%= link_to "Book Dog", new_dog_booking_path(@dog), type: "button", class: "btn btn-outline-dark" %>
     <% end %>
-    <p class="card-text"><%= @dog.address %></p>
   </div>
 </div>
 
-<div class="plain-text-button">
-  <p><%= link_to "< Back", dogs_path %></p>
-</div>
+<div style="margin: 20px;"><%= link_to "Back", dogs_path, type: "button", class: "btn btn-light" %></div>
