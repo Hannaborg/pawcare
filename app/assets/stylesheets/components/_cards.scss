@@ -3,10 +3,6 @@
  padding: 0;
 }
 
-.col-sm-4 {
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
 .card-dog .card-dog-info {
   padding: 20px;
@@ -27,3 +23,6 @@
   box-sizing: content-box;
 }
 
+.dog-list-container {
+  justify-content: center;
+}
