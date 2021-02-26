@@ -32,16 +32,17 @@ class DogsController < ApplicationController
   def destroy
     @dog = Dog.find(params[:id])
     if @dog.destroy
-      flash[:success] = 'Dog-entry was successfully deleted.'
+      flash[:notice] = 'Dog-entry was successfully deleted.'
+      redirect_to dogboard_path
     else
-      flash[:error] = 'Something went wrong'
+      flash[:alert] = 'Something went wrong'
+      redirect_to dogs_path
     end
-    redirect_to dogs_path
   end
 
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :photo)
+    params.require(:dog).permit(:name, :age, :address, :breed, :description, :photo)
   end
 end
