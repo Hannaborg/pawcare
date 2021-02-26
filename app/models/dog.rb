@@ -4,7 +4,7 @@ class Dog < ApplicationRecord
 	has_many :booked_users, through: :bookings, source: :user
 	has_one_attached :photo
 
-	validates :name, presence: true
+	validates :name, :age, :address, presence: true
 	validates :breed, :description, presence: true
 
 	include PgSearch::Model
