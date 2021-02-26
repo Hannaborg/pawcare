@@ -14,6 +14,24 @@ class BookingsController < ApplicationController
     @user.bookings
   end
 
+  def edit
+    @user = current_user
+    @dog = Dog.find(params[:dog_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @user = current_user
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      flash[:notice] = 'review updated'
+      redirect_to dashboard_path
+    else
+      flash[:alert] = 'Something went wrong'
+      render :edit
+    end
+  end
+
   def create
     @user = current_user
     @dog = Dog.find(params[:dog_id])
@@ -21,7 +39,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.dog = @dog
     if @booking.save
-      flash[:alert] = 'Please confirm your reservation'
+      flash[:notice] = 'Please confirm your reservation'
       redirect_to dog_booking_path(@dog, @booking)
     else
       flash[:alert] = 'Something went wrong with the dates'
@@ -43,6 +61,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:review, :start_date, :end_date)
+    params.require(:booking).permit(:review, :comment, :start_date, :end_date)
   end
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   get '/dogboard', to: 'pages#dogboard'
   resources :dogs, only: %i[ index show new create destroy ] do
-    resources :bookings, only: %i[ new index show create]
+    resources :bookings, only: %i[ new edit update index show create]
   end
 resources :bookings, only: %i[destroy]
 end

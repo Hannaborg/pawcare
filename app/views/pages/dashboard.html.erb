@@ -18,6 +18,12 @@
             <div class="my-bookings-actions">
               <i><%= link_to "", booking_path(booking), class: "fas fa-trash-alt", method: :delete %></i>
             </div>
+          <div class = "review-btn">
+            <%= link_to 'review', edit_dog_booking_path(booking.dog_id, booking.id) %>
+          </div>
+
+
+
           </div>
         </div>
       </div>

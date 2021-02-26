@@ -1,0 +1,13 @@
+<h1>Leave a review</h1>
+<div class="form-container col-12">
+  <div class="form-inputs col-6">
+    <%= simple_form_for [@dog, @booking] do |f| %>
+      <%# <%= f.error_notification %>
+      <%# <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :review, collection: 1..5 %>
+      <%= f.input :comment %>
+      <%= link_to 'Cancel', dashboard_path, class: 'btn btn-outline-secondary' %> or
+      <%= f.submit class: 'btn btn-outline-secondary' %>
+    <% end %>
+  </div>
+</div>
