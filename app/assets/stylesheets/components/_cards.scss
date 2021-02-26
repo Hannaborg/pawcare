@@ -3,10 +3,6 @@
  padding: 0;
 }
 
-.col-sm-4 {
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
 .card-dog .card-dog-info {
   padding: 20px;
@@ -26,6 +22,10 @@
   -moz-box-sizing: initial;
   box-sizing: content-box;
 }
+
+
+.dog-list-container {
+  justify-content: center;
 
 .my-bookings-card {
   background: white;
@@ -75,4 +75,5 @@
 
 .my-bookings-card .my-bookings-actions:hover {
   color: #555555;
+
 }
